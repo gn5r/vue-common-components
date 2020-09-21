@@ -12,8 +12,10 @@
         <v-text-field
           v-bind="attrs"
           v-on="on"
+          :class="{disabled:disabled}"
           :value="value"
           :clearable="clearable"
+          :disabled="disabled"
           prepend-icon="event"
           readonly
           solo
@@ -21,7 +23,13 @@
           @click:prepend="menu = true"
         ></v-text-field>
       </template>
-      <v-date-picker :value="parseDate(value)" @input="input" :show-current="showCurrentDay" />
+      <v-date-picker
+        :value="parseDate(value)"
+        @input="input"
+        :show-current="showCurrentDay"
+        :disabled="disabled"
+        :readonly="readonly"
+      />
     </v-menu>
   </div>
 </template>
@@ -50,6 +58,7 @@ export default {
       type: Boolean,
       default: true,
     },
+    readonly: Boolean,
   },
   data: () => ({
     menu: false,

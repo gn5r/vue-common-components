@@ -2,7 +2,7 @@
   <v-container fluid>
     <v-row align="center" justify="start" no-gutters>
       <v-col cols="3" lg="2">
-        <date-picker v-model="date" />
+        <date-picker v-model="date" disabled />
       </v-col>
     </v-row>
   </v-container>

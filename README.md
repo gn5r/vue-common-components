@@ -10,6 +10,15 @@
 
    - `npm i @gn5r/vue-common-components@beta`
 
+3. main.js に下記を記述
+
+   ```
+     import components from "@gn5r/vue-common-components";
+     import from "@gn5r/vue-common-components/css/style.scss"
+
+     Vue.use(components);
+   ```
+
 # Components/common
 
 ## HeaderBar

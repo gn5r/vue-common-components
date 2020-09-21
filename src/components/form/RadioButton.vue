@@ -4,9 +4,9 @@
       :value="value"
       :class="{ disabled: disabled || readonly }"
       :dark="dark"
-      :dense="dense"
       :disabled="disabled || readonly"
       :row="row"
+      dense
       @change="$emit('change', $event)"
     >
       <!-- ラジオボタングループのラベル -->
@@ -38,10 +38,6 @@ export default {
     row: Boolean,
     light: Boolean,
     dark: Boolean,
-    dense: {
-      type: Boolean,
-      default: true,
-    },
     disabled: Boolean,
     readonly: Boolean,
   },

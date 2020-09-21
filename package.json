@@ -1,12 +1,13 @@
 {
   "name": "@gn5r/vue-common-components",
-  "version": "0.1.0",
+  "version": "0.1.0-beta.2",
   "private": false,
   "author": "gn5r",
   "description": "vuetify拡張コンポーネントライブラリ",
   "main": "dist/vue-common-components.common.js",
   "files": [
-    "dist"
+    "dist",
+    "css"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
