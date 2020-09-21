@@ -1,6 +1,6 @@
 {
   "name": "@gn5r/vue-common-components",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0",
   "private": false,
   "author": "gn5r",
   "description": "vuetify拡張コンポーネントライブラリ",
@@ -14,7 +14,9 @@
     "build:components": "vue-cli-service build --target lib --name components src/build/build.components.js",
     "build:lib": "vue-cli-service build --target lib --name vue-common-components src/build/build.lib.js",
     "lint": "vue-cli-service lint",
-    "gen:json": "node ./src/build/build.vetur.js"
+    "gen:json": "node ./src/build/build.vetur.js",
+    "publish:latest": "npm publish",
+    "publish:beta": "npm publish --tag beta"
   },
   "dependencies": {},
   "devDependencies": {
