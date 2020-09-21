@@ -1,19 +1,21 @@
 const fs = require("fs");
 const Vue = require("vue");
-const files = require("../../dist/components.common").default;
+const files = require("../../dist/vue-common-components.common").default;
 
 Object.values(files).forEach((key) => {
-  const component = key;
-  const name =
-    component.name ||
-    component
-      .split("/")
-      .pop()
-      .replace(/\.\w+$/, "");
-  Vue.component(name, component);
+  if (key !== undefined && key !== null && typeof key !== "function") {
+    const component = key;
+    const name =
+      component.name ||
+      component
+        .split("/")
+        .pop()
+        .replace(/\.\w+$/, "");
+    Vue.component(name, component);
+  }
 });
 
-// 文字の境目;
+// 文字の境目
 const hyphenateRE = /\B([A-Z])/g;
 
 /**
